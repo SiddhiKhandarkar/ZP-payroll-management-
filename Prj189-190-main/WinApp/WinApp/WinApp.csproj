@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{31E14A9F-1A06-49D7-96D9-4BDF90360049}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinApp</RootNamespace>
+    <AssemblyName>WinApp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL" />
+    <Reference Include="MemMgmt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.3.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="menuMasters\frmDiseaseMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuMasters\frmDiseaseMaster.Designer.cs">
+      <DependentUpon>frmDiseaseMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menuMasters\frmDocMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuMasters\frmDocMaster.Designer.cs">
+      <DependentUpon>frmDocMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menuMasters\frmEmpMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuMasters\frmEmpMaster.Designer.cs">
+      <DependentUpon>frmEmpMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menuMasters\frmFamilyMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuMasters\frmFamilyMaster.Designer.cs">
+      <DependentUpon>frmFamilyMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menuMasters\frmHospitalMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuMasters\frmHospitalMaster.Designer.cs">
+      <DependentUpon>frmHospitalMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menuMasters\frmServiceHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuMasters\frmServiceHistory.Designer.cs">
+      <DependentUpon>frmServiceHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="menuMasters\frmDiseaseMaster.resx">
+      <DependentUpon>frmDiseaseMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuMasters\frmDocMaster.resx">
+      <DependentUpon>frmDocMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuMasters\frmEmpMaster.resx">
+      <DependentUpon>frmEmpMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuMasters\frmFamilyMaster.resx">
+      <DependentUpon>frmFamilyMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuMasters\frmHospitalMaster.resx">
+      <DependentUpon>frmHospitalMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuMasters\frmServiceHistory.resx">
+      <DependentUpon>frmServiceHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="regMasters\frmRegDisease.resx">
+      <DependentUpon>frmRegDisease.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="regMasters\frmRegDoctor.resx">
+      <DependentUpon>frmRegDoctor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="regMasters\frmRegEmp.resx">
+      <DependentUpon>frmRegEmp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="regMasters\frmRegFamilyMember.resx">
+      <DependentUpon>frmRegFamilyMember.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="regMasters\frmRegHeadOffice.resx">
+      <DependentUpon>frmRegHeadOffice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="regMasters\frmRegHospital.resx">
+      <DependentUpon>frmRegHospital.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="regMasters\frmRegSubOffice.resx">
+      <DependentUpon>frmRegSubOffice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sysBase\frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sysBase\frmSystemLogin.resx">
+      <DependentUpon>frmSystemLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="regMasters\frmRegDisease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="regMasters\frmRegDisease.Designer.cs">
+      <DependentUpon>frmRegDisease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="regMasters\frmRegDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="regMasters\frmRegDoctor.Designer.cs">
+      <DependentUpon>frmRegDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="regMasters\frmRegEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="regMasters\frmRegEmp.Designer.cs">
+      <DependentUpon>frmRegEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="regMasters\frmRegFamilyMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="regMasters\frmRegFamilyMember.Designer.cs">
+      <DependentUpon>frmRegFamilyMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="regMasters\frmRegHeadOffice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="regMasters\frmRegHeadOffice.Designer.cs">
+      <DependentUpon>frmRegHeadOffice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="regMasters\frmRegHospital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="regMasters\frmRegHospital.Designer.cs">
+      <DependentUpon>frmRegHospital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="regMasters\frmRegSubOffice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="regMasters\frmRegSubOffice.Designer.cs">
+      <DependentUpon>frmRegSubOffice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sysBase\ConsumeServerAPI.cs" />
+    <Compile Include="sysBase\consumeServiceAPI.cs" />
+    <Compile Include="sysBase\frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sysBase\frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sysBase\frmSystemLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sysBase\frmSystemLogin.Designer.cs">
+      <DependentUpon>frmSystemLogin.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emp_staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\family.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hospitals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical_bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\freelancer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\month_paybill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hospital_bed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_report.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
